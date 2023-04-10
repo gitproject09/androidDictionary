@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sopan.mydictionary.MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/blue"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.SearchView
+            android:layout_width="match_parent"
+            android:id="@+id/search_view"
+            app:defaultQueryHint="Search a word.."
+            app:iconifiedByDefault="false"
+            android:layout_height="?attr/actionBarSize"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_word"
+                android:textSize="24sp"
+                android:text="Word"
+                android:textColor="@color/purple_500"
+                android:textAlignment="center"
+                android:padding="8dp"
+                android:textStyle="italic"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="Meanings"
+                android:textColor="@color/blue"
+                android:textAlignment="center"
+                android:padding="8dp"
+                android:textStyle="italic"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycler_meanings"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
