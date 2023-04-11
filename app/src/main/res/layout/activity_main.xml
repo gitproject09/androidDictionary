@@ -6,7 +6,7 @@
     android:background="@color/white"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.sopan.mydictionary.MainActivity">
+    tools:context="com.sopan.mydictionary.Bangla.MainActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

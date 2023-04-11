@@ -21,6 +21,16 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".Bangla.activity.BanglaDictionaryActivity"
+            android:label="@string/title_bangla_dict"/>
+        <activity
+            android:name=".Bangla.activity.BookMarkedWordsActivity"
+            android:label="@string/title_activity_favourites" />
+        <activity
+            android:name=".Bangla.activity.AboutActivity"
+            android:label="@string/title_activity_about" />
+
     </application>
 
 </manifest>

@@ -6,10 +6,15 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.sopan.mydictionary.Bangla.activity.BanglaDictionaryActivity;
 import com.sopan.mydictionary.Models.Adapters.MeaningAdapter;
 import com.sopan.mydictionary.Models.ApiResponse;
 
@@ -24,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
         search_View = findViewById(R.id.search_view);
@@ -79,6 +85,23 @@ public class MainActivity extends AppCompatActivity {
         recycler_meanings.setLayoutManager(new GridLayoutManager(this, 1));
         meaningAdapter = new MeaningAdapter(this, apiResponse.getMeanings());
         recycler_meanings.setAdapter(meaningAdapter);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId() == R.id.bangla_dictionary) {
+            Intent intent = new Intent(this, BanglaDictionaryActivity.class);
+            startActivity(intent);
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
 }

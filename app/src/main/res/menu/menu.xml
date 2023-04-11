@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bookmarked_words"
+        android:icon="@drawable/bookmarked_words"
+        android:title="Favourites"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/add_new"
+        android:icon="@drawable/plus"
+        android:title="Add New"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/about"
+        android:title="About"
+        app:showAsAction="never" />
+
+</menu>
